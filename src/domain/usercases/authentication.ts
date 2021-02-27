@@ -1,4 +1,4 @@
-import { AccountModel } from "domain/models/AccountModel";
+import { AccountModel } from from "domain/models/AccountModel";
 
 type AuthenticationParams = {
     email: string,
@@ -10,5 +10,3 @@ export interface Authentication {
     auth(params: AuthenticationParams): Promise<AccountModel>
 }
 
-var x = 1;
-if (!!x) console.log('hi');
