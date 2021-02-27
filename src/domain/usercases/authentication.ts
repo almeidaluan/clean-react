@@ -1,12 +1,11 @@
-import { AccountModel } from  "domain/models/AccountModel";
+/* eslint-disable @typescript-eslint/no-unused-vars */
+import { AccountModel } from 'domain/models/AccountModel'
 
 type AuthenticationParams = {
-    email: string,
-    password: string
+  email: string
+  password: string
 }
-
 
 export interface Authentication {
-    auth(params: AuthenticationParams): Promise<AccountModel>
+  auth: (params: AuthenticationParams) => Promise<AccountModel>
 }
-
