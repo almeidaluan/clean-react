@@ -1,9 +1,9 @@
 {
     "compilerOptions": {
-        "target": "es5",
+        "target": "es6",
         "lib": [
-            "DOM",
-            "DOM.Iterable",
+            "dom",
+            "dom.Iterable",
             "esnext"
         ],
         "esModuleInterop": true,
@@ -18,7 +18,6 @@
         "strict": true,
         "forceConsistentCasingInFileNames": true,
         "resolveJsonModule": true,
-        "isolatedModules": true,
         "noEmit": true
     },
     "include": [
