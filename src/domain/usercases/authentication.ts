@@ -9,3 +9,6 @@ type AuthenticationParams = {
 export interface Authentication {
     auth(params: AuthenticationParams): Promise<AccountModel>
 }
+
+var x = 1;
+if (!!x) console.log('hi');
