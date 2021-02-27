@@ -16,7 +16,13 @@
   "license": "ISC",
   "husky": {
     "hooks": {
-      "pre-commit": "npm lint"
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "linters": {
+      "*.ts": ["eslint"],
+      "**/*.+(ts|tsx|json|css)": ["prettier --write", "git add"]
     }
   },
   "devDependencies": {
