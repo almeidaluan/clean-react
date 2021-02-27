@@ -13,7 +13,9 @@
   "author": "",
   "license": "ISC",
   "husky": {
-    "hooks": {}
+    "hooks": {
+      "pre-commit": "npm lint"
+    }
   },
   "devDependencies": {
     "@types/jest": "^26.0.20",
