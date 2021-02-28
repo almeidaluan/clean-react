@@ -1,4 +1,4 @@
-import { AuthenticationParams } from "domain/usercases/authentication";
+import { AuthenticationParams } from "@/domain/usercases/authentication";
 
 export class MockAuthentication {
 
