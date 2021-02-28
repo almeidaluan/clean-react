@@ -9,9 +9,7 @@
     "prepublishOnly": "pinst --disable",
     "postpublish": "pinst --enable"
   },
-  "keywords": [
-    
-  ],
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "husky": {
@@ -21,11 +19,17 @@
   },
   "lint-staged": {
     "linters": {
-      "*.ts": ["eslint"],
-      "**/*.+(ts|tsx|json|css)": ["prettier --write", "git add"]
+      "*.ts": [
+        "eslint"
+      ],
+      "**/*.+(ts|tsx|json|css)": [
+        "prettier --write",
+        "git add"
+      ]
     }
   },
   "devDependencies": {
+    "@types/faker": "^5.1.7",
     "@types/jest": "^26.0.20",
     "@types/node": "^14.14.31",
     "@typescript-eslint/eslint-plugin": "^4.15.2",

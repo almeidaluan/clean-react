@@ -1,7 +1,9 @@
 import { HttpPostClientSpy } from '../../test/HttpPostClientSpy'
 import { RemoteAuthentication } from './remote.authentication'
+import faker from 'faker'
 
-const makeSut = (url: string = 'other_url'): any => {
+
+const makeSut = (url: string = faker.internet.url()): any => {
   const httpPostClientSpy = new HttpPostClientSpy()
   const sut = new RemoteAuthentication(url, httpPostClientSpy)
   return {
@@ -11,10 +13,10 @@ const makeSut = (url: string = 'other_url'): any => {
 }
 
 describe('RemoteAuthentication', () => {
-  test('Should call HttpPostClient with correct URL',async () => {
+  test('Should call HttpPostClient with incorrect URL', async () => {
     const { sut, httpPostClientSpy } = makeSut()
-    const url = 'other_url'
+    const url = faker.internet.url()
     await sut.auth()
-    expect(httpPostClientSpy.url).toBe(url)
+    expect(httpPostClientSpy.url).not.toBe(url)
   })
 })
